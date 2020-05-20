@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from "./config/routes";
 
 import "./App.scss";
-
+console.log("routes : ", routes);
 function App() {
   return (
     <Router>
@@ -18,14 +18,14 @@ function App() {
 
 function RouteWithSubRoutes(props) {
   const { route } = props;
+
   console.log(route);
+
   return (
     <Route
       path={route.path}
       exact={route.exact}
-      render={(props) =>
-        <route.component routes={route.routes} {...props} />}
-
+      render={(props) => <route.component routes={route.routes} {...props} />}
     />
   );
 }
