@@ -9,16 +9,14 @@ function App() {
     <Router>
       <Switch>
         {routes.map((route, index) => (
-          <RouteWithSubRoutes key={index} route={route} />
+          <RouteWithSubRoutes key={index} {...route} />
         ))}
       </Switch>
     </Router>
   );
 }
 
-function RouteWithSubRoutes(props) {
-  const { route } = props;
-
+function RouteWithSubRoutes(route) {
   console.log(route);
 
   return (
