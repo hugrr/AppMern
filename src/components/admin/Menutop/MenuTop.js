@@ -1,6 +1,7 @@
 import React from "react";
 import HugoLogo from "../../../assets/img/png/logo1.png";
 import { Button } from "antd";
+import { logout } from "../../../api/auth";
 
 import {
   MenuUnfoldOutlined,
@@ -12,6 +13,11 @@ import "./MenuTop.scss";
 
 export default function MenuTop(props) {
   const { menuCollapsed, setMenuCollapsed } = props;
+  const logoutUser = () => {
+    logout();
+    window.location.reload();
+  };
+
   return (
     <div className="menu-top">
       <div className="menu-top__left">
@@ -29,7 +35,7 @@ export default function MenuTop(props) {
         </Button>
       </div>
       <div className="menu-top__right">
-        <Button type="link">
+        <Button type="link" onClick={logoutUser}>
           <PoweroffOutlined style={{ fontSize: "16px" }} />
         </Button>
       </div>

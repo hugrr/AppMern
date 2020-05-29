@@ -1,13 +1,8 @@
 @import "../../../scss/index.scss";
 
-.register-form {
-  text-align: left;
-
-  .ant-form-item {
-    &:nth-child(3),
-    &:last-of-type {
-      margin: 0;
-    }
+.login-form {
+  .ant-form-item-of-type {
+    margin: 0;
   }
 
   &__input {
@@ -29,10 +24,11 @@
 
   &__button {
     width: 100%;
-    font-size: 0em + 22px / $defaultFontSize;
+    font-size: 0em +22px / $defaultFontSize;
     background-color: $primary-color;
     color: $font-light;
     height: 42px;
+    margin-top: 20px;
 
     &:hover {
       background-color: $primary-color-hover;
